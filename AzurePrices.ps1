@@ -1,6 +1,6 @@
 Param (
     [parameter()]
-    [int]$ARCdiscount=10,
+    [int]$ARCdiscount=0,
     [parameter()]
     $Location='uaenorth',
     [parameter()]
@@ -81,4 +81,4 @@ If (!($cores) -or !($memory)) {
     write-host "VMs with $cores cores or $memory GB memory"
     $FullArray | where {$_.memory -eq $memory -or $_.cores -eq $cores} | select meterName, productName, Cores, Memory, PAYG, DACR, 1YR, 1Y%, 3YR, 3Y% | sort-object -property meterName |FT
 }
-return $FullArray
+
