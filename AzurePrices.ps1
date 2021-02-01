@@ -45,7 +45,7 @@ write-host "the 38% for the 1YR RI indicates that if the VM will be used >38% of
 write-host "the 24% for the 3YR RI indicates that if the VM will be used >24% of the time (in 3 years), an RI will be cheaper than DACR"
 write-host ""
 Write-host "You can also use the module separately if you need to adjust the output - import the AzurePrices.psm1 module and run" -ForegroundColor Cyan
-write-host '$MyItems=Get-AZVMPrices -ARCdiscount 10 -Location uaenorth' -ForegroundColor Cyan
+write-host '$yourVariable=Get-AZVMPrices -ARCdiscount 10 -Location uaenorth' -ForegroundColor Cyan
 write-host 'then adjust the output as needed for $MyItems array' -ForegroundColor Cyan
 write-host 'example: $yourVariable | select meterName, productName, PAYG, DACR, 1YR, 1Y%, 3YR, 3Y% | sort-object -property meterName |FT' -ForegroundColor Yellow
 write-host 'example: $yourVariable | select meterName, productName, PAYG, DACR, 1YR, 1Y%, 3YR, 3Y% | sort-object -property meterName |Export-CSV c:\myprices.csv' -ForegroundColor Yellow
