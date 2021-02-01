@@ -102,7 +102,7 @@ Function Get-AZVMPrices{
         $_ | Add-Member -MemberType NoteProperty -Name "Discount" -Value $ARCdiscount
         $_ | Add-Member -MemberType NoteProperty -Name "DACR" -Value $PAYGACR
         $_ | Add-Member -MemberType NoteProperty -Name "1YR" -Value $VM1YRMonth
-        $_ | Add-Member -MemberType NoteProperty -Name "3YR" -Value $PAYGACR
+        $_ | Add-Member -MemberType NoteProperty -Name "3YR" -Value $VM3YRMonth
         $_ | Add-Member -MemberType NoteProperty -Name "1Y%" -Value $1YrPercentage
         $_ | Add-Member -MemberType NoteProperty -Name "3Y%" -Value $3YrPercentage
         
